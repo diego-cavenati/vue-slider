@@ -45,17 +45,17 @@ createApp({
                 this.activeImage = 0;  
             } 
         },
-        // changeImage(index){
-        //     this.activeImage = index;
-        // },
-        // startAutoPlay(){
-        //     this.intervalId = setInterval(()=>{
-        //         this.nextImage();
-        //     }, 1000)
-        // },
-        // stopAutoPlay(){
-        //     clearInterval(this.intervalId)
-        // }
+        changeImage(index){
+            this.activeImage = index;
+        },
+        startAutoPlay(){
+            this.intervalId = setInterval(()=>{
+                this.nextImage();
+            }, 1000)
+        },
+        stopAutoPlay(){
+            clearInterval(this.intervalId)
+        }
     },
     mounted(){
         // this.startAutoPlay();
