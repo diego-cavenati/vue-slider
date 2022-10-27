@@ -14,12 +14,11 @@
     <div id="app">
 
         <div class="container">
+            <div class="slider-wrapper" tabindex="0">
 
-            <!-- <div class="slider-wrapper" tabindex="0" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()"> -->
+                <div class="item" :class="activeImage === i ? 'visible' : ''" v-for="(element, i) in slides" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
 
-                <div class="item" v-for="(element, i) in slides">
-
-                    <img :src="element.image" :class="activeImage === i ? 'visible' : ''" alt="Spiderman">
+                    <img :src="element.image" alt="Spiderman">
 
                     <div class="text">
                         <h3>{{ element.title }}</h3>
@@ -31,12 +30,14 @@
                 <div class="thumbs">
                     <div class="prev" @click="prevImage"></div>
                     <div class="next" @click="nextImage"></div>
-                    <div class="thumb active">
-                        <img :class="activeImage === i ? 'active' : ''" :src="thumb" alt="" v-for="(thumb, i) in slides.image" @click="changeImage(i)">
+
+                    <div class="thumb" :class="activeImage === i ? 'active' : ''" v-for="(element, i) in slides">
+                        <img :src="element.image" alt="element.alt" @click="changeImage(i)">
                     </div>
+                    
                 </div>
 
-            <!-- </div> -->
+            </div>
         </div>
 
     </div>
