@@ -24,6 +24,14 @@
     object-fit: cover;
 }
 
+.item img {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
 .item .text {
     position: absolute;
     right: 20px;
