@@ -23,14 +23,24 @@
     height: 100%;
     object-fit: cover;
 }
-
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
 .item img {
     display: none;
 }
 
-.visible {
+img.visible {
     display: block;
 }
+
+.item.visible {
+    display: block;
+}
+
+
 
 .item .text {
     position: absolute;
